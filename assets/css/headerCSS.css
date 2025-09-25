@@ -1,96 +1,85 @@
-.header {
-    padding-inline: 16px;
-    border-bottom: solid 1px white;
-    position: relative;
-    background-color: #000000;
-}
+ .header {
+            padding-inline: 16px;
+            border-bottom: solid 1px white;
+            position: relative;
+        }
 
-.navHeader {
-    max-width: 1280px;
-    height: 85px;
-    margin-inline: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 0 16px;
-}
+        .navHeader {
+            max-width: 1280px;
+            height: 85px;
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+        }
 
-.navHeader-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60vh;
-    background-color: rgb(31, 31, 31);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    list-style: none;
-    transform: translateY(-100%);
-    transition: transform 1s ease-in-out;
-    z-index: 9999;
-    overflow: hidden;
-}
+        .navHeader-list {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
 
-.navHeader.active .navHeader-list {
-    transform: translateY(0);
-}
+            height: 85vh;
+            background-color: rgb(31, 31, 31);
+            border-bottom: solid 1px white;
+            display: flex;
+            flex-direction: column;
 
-.navHeader-list a {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    font-family: "Lexend", sans-serif;
-    text-align: center;
-}
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease-in-out;
+            z-index: 9999;
+        }
 
-.logoHeader2 img {
-    height: 60px;
-    width: 60px;
-}
+        .navHeader-list a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
 
-.logoMenu {
-    height: 60px;
-    width: 60px;
-    margin-top: 16px;
-}
+        .navHeader.active .navHeader-list {
+            transform: translateY(0);
+        }
 
-/* Botão hamburguer sempre visível */
-.hamburguer {
-    border: none;
-    background: none;
-    border-top: 5px solid white;
-    cursor: pointer;
-    width: 40px;
-    height: 35px;
-    position: relative;
-    z-index: 10000;
-}
-.hamburguer::before,
-.hamburguer::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: white;
-    margin-top: 8px;
-}
+        .logoHeader {
+            height: 80px;
+            width: 80px;
+            margin-left: 70px;
+            z-index: 10000;
+        }
 
-.pagini {
-    font-size: 2em;
-    color: #00ffff;
-}
+        .hamburguer {
+            border: none;
+            background: none;
+            border-top: 5px solid white;
+            cursor: pointer;
+            z-index: 10000;
+            width: 40px;
+        }
 
-/* Nenhuma diferenciação de desktop/mobile agora */
-@media (max-width: 750px) {
-    .navHeader-list a {
-        font-size: 24px;
-    }
+        .navHeader img{
+            margin-right: 65px;
+        }
 
-    .pagini {
-        font-size: 2.5em;
-    }
-}
+        .hamburguer::before,
+        .hamburguer::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 5px;
+            background: white;
+            margin-top: 8px;
+        }
+        @media (max-width:750px){
+            .logoHeader{
+                margin-left: 0;
+            }
+            .navHeader img{
+            margin-right: 0;
+        }
+        }
